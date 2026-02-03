@@ -48,6 +48,30 @@ pip install -r requirements.txt
 python main.py
 ```
 
+## One-Command VM Setup
+On a fresh Debian/Ubuntu VM:
+
+1) Clone the repo and enter it:
+```
+git clone https://github.com/dannyboy637/request-bot-pos.git
+cd request-bot-pos
+```
+
+2) Run setup (creates .env template if missing):
+```
+./setup.sh
+```
+
+3) Edit `.env`, upload your service account JSON, then deploy:
+```
+./deploy.sh
+```
+
+4) Check status:
+```
+sudo systemctl status request-bot
+```
+
 ## Deploy on Render (Free)
 Render can run this as a background worker using long-polling.
 
